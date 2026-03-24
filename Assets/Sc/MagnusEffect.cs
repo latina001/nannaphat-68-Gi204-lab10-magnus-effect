@@ -19,8 +19,8 @@ public class MagnusEffect : MonoBehaviour
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame && !_isShoot)
         {
-            _rb.AddForce(new Vector3(0,0.5f,0) * kickforce, ForceMode.Impulse);
-            _rb.AddTorque(Vector3.up * spinAmount);
+            _rb.AddForce(new Vector3(0,0.5f,kickforce) * kickforce, ForceMode.Impulse);
+            _rb.AddTorque(-Vector3.up * spinAmount);
             _isShoot = true;
         }
     }
